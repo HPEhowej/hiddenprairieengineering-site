@@ -1,10 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About | Hidden Prairie Engineering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Learn more about Hidden Prairie Engineering—created to provide practical civil engineering grounded in how projects are planned, funded, reviewed, and built.">
+
+  <title>About Us | Hidden Prairie Engineering</title>
+  <meta name="description" content="Learn about Hidden Prairie Engineering, a Southeast Iowa civil engineering practice focused on practical design, clear communication, and dependable project support.">
 
   <style>
     :root {
@@ -12,408 +14,678 @@
       --green-mid: #355e3b;
       --green-footer: #243c1e;
       --green-light: #e8f1ea;
-      --sand: #d9d2c0;
       --accent: #c4a484;
       --text-main: #1f2933;
-      --text-muted: #6b7280;
-      --text-muted-footer: #d3e4d1;
-      --card-bg: #ffffff;
-      --radius-lg: 18px;
-      --radius-md: 12px;
-      --shadow-soft: 0 18px 40px rgba(0,0,0,0.08);
+      --text-muted: #596572;
       --max-width: 1120px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f4f6f8;
+      background: #f6f7f5;
       color: var(--text-main);
-      line-height: 1.5;
+      line-height: 1.65;
     }
 
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    /* ---------- HEADER ---------- */
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-    header {
-      background: radial-gradient(circle at top left, #f4f9f4 0%, #e3efe5 40%, #f4f6f8 100%);
-      padding: 0 1.5rem 2.25rem;
-      border-bottom: 4px solid var(--green-dark);
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* NAVIGATION */
+
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8e0;
+      padding: 0 1.5rem;
     }
 
     .nav {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 1rem 0 0.5rem;
+      padding: 1rem 0;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      align-items: center;
+      gap: 1.5rem;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      font-weight: 600;
+      gap: 0.75rem;
       color: var(--green-dark);
+      font-weight: 700;
+      font-size: 1.05rem;
     }
 
-    .logo img { height: 40px; }
+    .logo img {
+      height: 44px;
+      width: auto;
+    }
 
     .nav-links {
       display: flex;
-      gap: 1.2rem;
-      font-size: 0.9rem;
-    }
-
-    .nav-links a {
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.92rem;
       font-weight: 500;
-      color: var(--text-main);
     }
 
-    .nav-links a:hover { color: var(--green-dark); }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--green-mid);
+    }
 
-    /* ---------- HERO ---------- */
+    /* HERO */
 
     .hero {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 2.5rem;
-      align-items: center;
-      padding: 1.25rem 0 0;
+      background: linear-gradient(135deg, #edf3ec 0%, #f8f9f6 100%);
+      padding: 5rem 1.5rem;
+      border-bottom: 3px solid var(--green-dark);
     }
 
-    .hero-kicker {
-      font-size: 0.85rem;
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: var(--green-mid);
+      font-size: 0.82rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+      margin-bottom: 1rem;
     }
 
-    .hero h1 {
-      font-size: clamp(2.1rem, 3vw, 2.6rem);
-      line-height: 1.15;
-      margin: 0 0 0.75rem;
+    h1 {
       color: var(--green-dark);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      margin: 0 0 1.5rem;
     }
 
     .hero p {
-      margin: 0;
       color: var(--text-muted);
-      max-width: 40rem;
+      font-size: 1.1rem;
+      max-width: 750px;
+      margin: 0;
     }
 
-    .hero-visual {
-      background: var(--card-bg);
-      border-radius: 24px;
-      padding: 0.75rem;
-      box-shadow: var(--shadow-soft);
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 4.5rem 1.5rem;
     }
 
-    .hero-visual img {
-      border-radius: 18px;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
+    .section-heading {
+      margin-bottom: 1.8rem;
     }
 
-    main { flex: 1; }
-
-    section { padding: 2.75rem 1.5rem; }
-
-    .section-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
+    .section-heading h2 {
+      color: var(--green-dark);
+      font-size: clamp(1.7rem, 3vw, 2.2rem);
+      line-height: 1.25;
+      margin: 0 0 0.7rem;
     }
 
-    .two-column {
+    .section-heading p {
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .section-rule {
+      width: 55px;
+      height: 3px;
+      background: var(--accent);
+      margin: 1rem 0;
+    }
+
+    .body-copy p {
+      color: var(--text-muted);
+      margin: 0 0 1.2rem;
+    }
+
+    .body-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* WHY HPE EXISTS */
+
+    .purpose {
+      background: #ffffff;
+    }
+
+    .purpose-layout {
       display: grid;
-      gap: 2rem;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 4rem;
       align-items: start;
     }
 
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius-md);
-      padding: 1.6rem 1.75rem;
-      box-shadow: var(--shadow-soft);
+    .purpose-panel {
+      background: #f0f4ef;
+      border-left: 4px solid var(--green-mid);
+      padding: 2rem;
+      border-radius: 0 8px 8px 0;
     }
 
-    .card h2 {
-      margin: 0 0 0.6rem;
-      font-size: 1.35rem;
+    .purpose-panel h3 {
       color: var(--green-dark);
-      position: relative;
+      font-size: 1.2rem;
+      margin: 0 0 1rem;
     }
 
-    .card h2::after {
-      content: "";
-      display: block;
-      width: 56px;
-      height: 3px;
-      background: var(--accent);
-      margin-top: 0.45rem;
-      border-radius: 999px;
+    .purpose-panel p {
+      color: var(--text-muted);
+      margin: 0;
     }
 
-    .about-text {
-      font-size: 1.02rem;
-      color: var(--text-main);
-      line-height: 1.7;
+    /* OUR APPROACH */
+
+    .approach {
+      background: #f0f4ef;
     }
 
-    .about-text p { margin: 0 0 1.1rem; }
-    .about-text p:last-child { margin-bottom: 0; }
+    .approach-intro {
+      max-width: 800px;
+      margin-bottom: 2rem;
+    }
 
-    /* headings inside the about text (same green style, slightly smaller) */
-    .about-text h2 {
-      margin: 1.6rem 0 0.6rem;
-      font-size: 1.15rem;
+    .approach-intro p {
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .approach-card {
+      background: #ffffff;
+      border: 1px solid #e0e8df;
+      border-top: 4px solid var(--green-mid);
+      border-radius: 8px;
+      padding: 1.8rem;
+    }
+
+    .card-number {
+      color: #7c9277;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .approach-card h3 {
       color: var(--green-dark);
-      position: relative;
+      font-size: 1.2rem;
+      line-height: 1.35;
+      margin: 1rem 0 0.7rem;
     }
 
-    .about-text h2::after {
-      content: "";
-      display: block;
-      width: 48px;
-      height: 3px;
-      background: var(--accent);
-      margin-top: 0.4rem;
-      border-radius: 999px;
+    .approach-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0;
     }
 
-    .expect-list {
-      margin: 0.9rem 0 0;
-      padding-left: 1.1rem;
-      color: var(--text-main);
+    /* CLIENT EXPECTATIONS */
+
+    .expectations {
+      background: #ffffff;
     }
 
-    .expect-list li {
-      margin: 0.35rem 0;
+    .expectations-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 4rem;
+      align-items: start;
     }
 
-    /* ---------- FOOTER ---------- */
+    .expectations-intro p {
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .expectation-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .expectation-item {
+      background: #fafbf9;
+      border: 1px solid #e2e8e0;
+      border-radius: 6px;
+      padding: 1.2rem 1.4rem;
+    }
+
+    .expectation-item h3 {
+      color: var(--green-dark);
+      font-size: 1rem;
+      margin: 0 0 0.3rem;
+    }
+
+    .expectation-item p {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      margin: 0;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      background: var(--green-dark);
+      color: #ffffff;
+      text-align: center;
+      padding: 4rem 1.5rem;
+    }
+
+    .contact-section h2 {
+      font-size: 2rem;
+      margin: 0 0 1rem;
+    }
+
+    .contact-section p {
+      color: #dce9d9;
+      max-width: 620px;
+      margin: 0 auto 1.8rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.6rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s ease;
+    }
+
+    .contact-section .btn {
+      background: #ffffff;
+      color: var(--green-dark);
+    }
+
+    .contact-section .btn:hover {
+      background: var(--green-light);
+    }
+
+    /* FOOTER */
 
     .site-footer {
       background: var(--green-footer);
-      color: var(--text-muted-footer);
-      padding: 2.5rem 1.5rem 1.25rem;
-      margin-top: 0;
+      color: #d3e4d1;
+      padding: 3rem 1.5rem 1.5rem;
     }
 
-    .site-footer-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-    }
-
-    .footer-columns {
+    .footer-grid {
       display: grid;
-      grid-template-columns:
-        minmax(0, 1.3fr)
-        minmax(0, 1fr)
-        minmax(0, 1.2fr)
-        minmax(0, 1.2fr);
+      grid-template-columns: 1.3fr 1fr 1fr 1.4fr;
       gap: 2rem;
-      align-items: flex-start;
     }
 
-    .footer-logo-block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .footer-logo-block img {
-      max-height: 110px;
-      height: auto;
+    .footer-brand img {
+      max-height: 100px;
       width: auto;
-      max-width: 100%;
-      margin-bottom: 0.5rem;
+      margin: 0 auto 0.7rem;
     }
 
-    .footer-logo-block .tagline {
-      margin: 0;
+    .footer-brand p {
       text-align: center;
-      width: 100%;
-      font-size: 0.85rem;
-      color: var(--text-muted-footer);
+      margin: 0;
+      font-size: 0.9rem;
     }
 
     .footer-heading {
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
       color: #ffffff;
-      margin: 0 0 0.5rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
     }
 
     .footer-link,
     .footer-text {
       font-size: 0.9rem;
-      margin: 0.15rem 0;
+      margin: 0.4rem 0;
     }
 
-    .footer-link a { color: var(--text-muted-footer); }
-    .footer-link a:hover { color: #ffffff; }
+    .footer-link a:hover,
+    .footer-contact a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
 
-    .footer-contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.4rem;
-      margin: 0.15rem 0;
+    .footer-contact {
       font-size: 0.9rem;
+      overflow-wrap: anywhere;
     }
 
-    .footer-contact-icon {
-      font-size: 0.95rem;
-      line-height: 1.3;
-    }
-
-    .footer-divider {
-      border-top: 1px solid rgba(255, 255, 255, 0.18);
-      margin: 2rem 0 0.75rem;
+    .footer-contact p {
+      margin: 0.4rem 0 1rem;
     }
 
     .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 2.5rem;
+      padding-top: 1rem;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      font-size: 0.8rem;
-      color: var(--text-muted-footer);
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
     }
 
-    .footer-bottom-bar {
-      margin-top: 0.75rem;
-      height: 4px;
-      background: var(--green-dark);
-      border-radius: 999px;
-    }
-
-    /* ---------- RESPONSIVE ---------- */
+    /* RESPONSIVE */
 
     @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-      .footer-columns { grid-template-columns: 1fr 1fr; }
-    }
+      .purpose-layout,
+      .expectations-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
 
-    @media (max-width: 720px) {
-      .nav { flex-direction: column; align-items: flex-start; }
-      .nav-links { flex-wrap: wrap; }
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 640px) {
-      section { padding-inline: 1.1rem; }
-      .footer-columns { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 0.8rem 1.2rem;
+      }
+
+      .hero {
+        padding: 3.5rem 1.2rem;
+      }
+
+      section {
+        padding: 3rem 1.2rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 
 <body>
-<div class="page">
 
   <!-- HEADER -->
-  <header>
+  <header class="site-header" id="home">
     <div class="nav">
-      <div class="logo">
-        <img src="images/Logo Main.png" alt="Hidden Prairie Engineering logo">
+      <a class="logo" href="index.html">
+        <img src="img/Logo Main.png" alt="Hidden Prairie Engineering logo">
         <span>Hidden Prairie Engineering</span>
-      </div>
-      <nav class="nav-links">
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="about.html" aria-current="page">About</a>
         <a href="index.html#services">Services</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html#projects">Project Support</a>
+        <a href="#contact">Contact</a>
       </nav>
-    </div>
-
-    <div class="hero">
-      <div>
-        <div class="hero-kicker">About</div>
-        <h1>Practical by design.</h1>
-        <p>
-          Hidden Prairie Engineering was created to provide a more practical approach to civil engineering—one grounded in how projects are actually planned, funded, reviewed, and built.
-        </p>
-      </div>
-
-      <div class="hero-visual">
-        <img src="images/PrairieOverlook.png" alt="Prairie overlook and city in the distance">
-      </div>
     </div>
   </header>
 
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">About Hidden Prairie Engineering</div>
+
+        <h1>Practical by Design.</h1>
+
+        <p>
+          Hidden Prairie Engineering was created to provide a practical
+          approach to civil engineering, grounded in an understanding
+          of how projects are planned, funded, reviewed, constructed,
+          and maintained.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <main>
 
-    <!-- COMBINED CONTENT -->
-    <section>
-      <div class="section-inner two-column">
+    <!-- WHY WE EXIST -->
+    <section class="purpose">
+      <div class="container purpose-layout">
 
-        <div class="card">
-          <h2>Why we exist</h2>
-
-          <div class="about-text">
-            <p>
-              Many communities and organizations are asked to do more with limited resources. Budgets are tight, staff time is constrained, and project schedules matter. Engineering solutions need to work not just on paper, but in the field and over the long term. Hidden Prairie Engineering exists to help clients navigate those realities with clear guidance and realistic design decisions.
-            </p>
-
-            <h2>How we approach our work</h2>
-
-            <p>
-              Hidden Prairie Engineering is intentionally structured around clarity, efficiency, and follow-through. Communication is direct, expectations are defined early, and recommendations are made with purpose. Every design decision is evaluated based on constructability, maintainability, and how well it aligns with a client’s operational and financial constraints.
-            </p>
-
-            <p>
-              The goal is simple: help projects move forward with fewer surprises and better outcomes.
-            </p>
-
-            <h2>What you can expect</h2>
-
-            <ul class="expect-list">
-              <li>Clear, direct communication and practical coordination</li>
-              <li>Purpose-driven recommendations with straightforward reasoning</li>
-              <li>Buildable, maintainable designs grounded in real-world constraints</li>
-              <li>Efficient documentation with a focus on reducing surprises</li>
-            </ul>
-
-            <p>
-              Hidden Prairie Engineering continues to grow steadily and intentionally, focused on long-term client relationships and engineering work that is practical, dependable, and grounded in real-world needs.
-            </p>
+        <div class="body-copy">
+          <div class="section-heading">
+            <h2>Why Hidden Prairie Engineering Exists</h2>
+            <div class="section-rule"></div>
+            <p>Engineering solutions should work beyond the drawing sheet.</p>
           </div>
+
+          <p>
+            Communities and organizations are continually asked to do
+            more with limited resources. Budgets are tight, staff time
+            is constrained, and project schedules matter.
+          </p>
+
+          <p>
+            Engineering solutions need to work not just on paper,
+            but in the field and over the long term. A technically
+            sound design is only part of a successful project.
+            Constructability, maintenance requirements, available
+            funding, and the people responsible for operating the
+            finished improvements all matter.
+          </p>
+
+          <p>
+            Hidden Prairie Engineering exists to help clients navigate
+            those realities with clear guidance, practical design
+            decisions, and an understanding of the challenges
+            that come with delivering infrastructure projects.
+          </p>
         </div>
 
+        <div class="purpose-panel">
+          <h3>Our Philosophy</h3>
+          <p>
+            Good engineering balances technical requirements
+            with real-world constraints. Our focus is on
+            developing solutions that are practical to build,
+            reasonable to maintain, and appropriate for
+            each client's needs and resources.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OUR APPROACH -->
+    <section class="approach">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>How We Approach Our Work</h2>
+          <div class="section-rule"></div>
+          <p>
+            A straightforward process focused on clarity,
+            efficiency, and follow-through.
+          </p>
+        </div>
+
+        <div class="approach-intro">
+          <p>
+            Hidden Prairie Engineering is intentionally structured
+            to provide direct communication and focused project
+            attention. Expectations are established early,
+            recommendations are made with purpose, and
+            engineering decisions are evaluated with the
+            finished project in mind.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+
+          <div class="approach-card">
+            <div class="card-number">01 / COMMUNICATION</div>
+            <h3>Clear &amp; Direct</h3>
+            <p>
+              Clients work directly with an experienced professional
+              engineer. Communication is straightforward,
+              expectations are defined early, and project
+              decisions are explained clearly.
+            </p>
+          </div>
+
+          <div class="approach-card">
+            <div class="card-number">02 / PRACTICAL DESIGN</div>
+            <h3>Built for the Real World</h3>
+            <p>
+              Design decisions consider constructability,
+              long-term maintenance, operational needs,
+              and the financial constraints that influence
+              a project's success.
+            </p>
+          </div>
+
+          <div class="approach-card">
+            <div class="card-number">03 / PROJECT DELIVERY</div>
+            <h3>Efficient &amp; Focused</h3>
+            <p>
+              Our lean approach emphasizes meaningful
+              engineering work, efficient documentation,
+              and the coordination needed to keep
+              projects moving forward.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT TO EXPECT -->
+    <section class="expectations">
+      <div class="container expectations-layout">
+
+        <div class="expectations-intro">
+          <div class="section-heading">
+            <h2>What You Can Expect</h2>
+            <div class="section-rule"></div>
+            <p>
+              Practical engineering support built around
+              the needs of each project.
+            </p>
+          </div>
+
+          <p>
+            Hidden Prairie Engineering focuses on developing
+            long-term client relationships through dependable
+            service, thoughtful recommendations, and a
+            consistent commitment to quality.
+          </p>
+        </div>
+
+        <div class="expectation-list">
+
+          <div class="expectation-item">
+            <h3>Direct Professional Involvement</h3>
+            <p>
+              Personal attention and direct communication
+              with the engineer responsible for your project.
+            </p>
+          </div>
+
+          <div class="expectation-item">
+            <h3>Practical Recommendations</h3>
+            <p>
+              Straightforward reasoning and solutions that
+              reflect project priorities and constraints.
+            </p>
+          </div>
+
+          <div class="expectation-item">
+            <h3>Constructible, Maintainable Designs</h3>
+            <p>
+              Engineering decisions informed by how
+              infrastructure is built, operated, and maintained.
+            </p>
+          </div>
+
+          <div class="expectation-item">
+            <h3>Efficient Project Coordination</h3>
+            <p>
+              Organized documentation, clear expectations,
+              and a focus on reducing unnecessary surprises.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <h2>Let's Talk About Your Project</h2>
+
+        <p>
+          Whether you're planning an improvement, evaluating
+          an infrastructure need, or looking for engineering
+          support, we'd welcome the opportunity to discuss
+          how Hidden Prairie Engineering can help.
+        </p>
+
+        <a class="btn" href="mailto:howej@hiddenprairieengineering.com">
+          Contact Hidden Prairie Engineering
+        </a>
       </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer" id="contact">
-    <div class="site-footer-inner">
+  <footer class="site-footer">
+    <div class="container">
 
-      <div class="footer-columns">
-        <div class="footer-logo-block">
-          <img src="images/Logo Main White.png" alt="Hidden Prairie Engineering logo">
-          <p class="tagline">Practical by design.</p>
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <img src="img/Logo Main White.png" alt="Hidden Prairie Engineering logo">
+          <p>Practical by design.</p>
         </div>
 
         <div>
@@ -421,54 +693,48 @@
           <p class="footer-link"><a href="index.html">Home</a></p>
           <p class="footer-link"><a href="about.html">About</a></p>
           <p class="footer-link"><a href="index.html#services">Services</a></p>
-          <p class="footer-link"><a href="index.html#projects">Projects</a></p>
-          <p class="footer-link"><a href="index.html#contact">Contact</a></p>
+          <p class="footer-link"><a href="index.html#projects">Project Support</a></p>
+          <p class="footer-link"><a href="#contact">Contact</a></p>
         </div>
 
         <div>
           <div class="footer-heading">Services</div>
           <p class="footer-text">Roadway Design</p>
           <p class="footer-text">Stormwater &amp; Utilities</p>
-          <p class="footer-text">Grant Writing &amp; Funding</p>
+          <p class="footer-text">Planning &amp; Funding</p>
           <p class="footer-text">Construction Support</p>
           <p class="footer-text">Plan Reviews &amp; Permitting</p>
         </div>
 
-        <div>
+        <div class="footer-contact">
           <div class="footer-heading">Contact</div>
 
-          <div class="footer-contact-item">
-            <span class="footer-contact-icon">📍</span>
-            <span>13386 Hidden Prairie Drive<br>Burlington, Iowa 52601</span>
-          </div>
+          <p>
+            13386 Hidden Prairie Drive<br>
+            Burlington, Iowa 52601
+          </p>
 
-          <div class="footer-contact-item">
-            <span class="footer-contact-icon">✉️</span>
-            <span>
-              <a href="mailto:howe@hiddenprairieengineering.com">
-                howe@hiddenprairieengineering.com
-              </a>
-            </span>
-          </div>
+          <p>
+            <a href="mailto:howej@hiddenprairieengineering.com">
+              howej@hiddenprairieengineering.com
+            </a>
+          </p>
 
-          <div class="footer-contact-item">
-            <span class="footer-contact-icon">👤</span>
-            <span>Jesse Howe, PE<br>Principal Engineer</span>
-          </div>
+          <p>
+            Jesse Howe, PE<br>
+            Principal Engineer
+          </p>
         </div>
-      </div>
 
-      <div class="footer-divider"></div>
+      </div>
 
       <div class="footer-bottom">
-        <div>© 2025 Hidden Prairie Engineering, PLLC. All rights reserved.</div>
-        <div>Burlington, Iowa &nbsp;|&nbsp; Licensed Professional Engineer</div>
+        <span>&copy; 2026 Hidden Prairie Engineering, PLLC. All rights reserved.</span>
+        <span>Burlington, Iowa | Licensed Professional Engineer</span>
       </div>
 
-      <div class="footer-bottom-bar"></div>
     </div>
   </footer>
 
-</div>
 </body>
 </html>
